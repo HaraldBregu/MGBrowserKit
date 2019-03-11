@@ -29,12 +29,9 @@ import WebKit
 
 public class MGBrowserController: UIViewController {
     @IBOutlet var webView: WKWebView!
-    
     var data:MGBrowserData!
     var design:MGBrowserDesign!
     public var delegate:MGBrowserControllerDelegate!
-
-    //   var bannerView:GADBannerView!
 
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -65,16 +62,6 @@ public class MGBrowserController: UIViewController {
         let urlRequest = URLRequest(url: websiteUrl)
         webView.load(urlRequest)
         startActivityIndicatorView()
-        
-//        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
-//        view.addSubview(bannerView)
-//        bannerView.snp.makeConstraints { (make) -> Void in
-//            make.bottom.equalTo(self.view)
-//            make.centerX.equalTo(self.view.center)
-//        }
-//        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
-//        bannerView.rootViewController = self
-//        bannerView.load(GADRequest())
     }
     
     private lazy var activityIndicatorView:UIActivityIndicatorView = {

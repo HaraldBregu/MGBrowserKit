@@ -1,84 +1,20 @@
 PODS:
-  - Firebase/AdMob (5.18.0):
-    - Firebase/Core
-    - Google-Mobile-Ads-SDK (~> 7.40)
-  - Firebase/Core (5.18.0):
-    - Firebase/CoreOnly
-    - FirebaseAnalytics (= 5.7.0)
-  - Firebase/CoreOnly (5.18.0):
-    - FirebaseCore (= 5.3.1)
-  - FirebaseAnalytics (5.7.0):
-    - FirebaseCore (~> 5.3)
-    - FirebaseInstanceID (~> 3.6)
-    - GoogleAppMeasurement (= 5.7.0)
-    - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
-    - GoogleUtilities/MethodSwizzler (~> 5.2)
-    - GoogleUtilities/Network (~> 5.2)
-    - "GoogleUtilities/NSData+zlib (~> 5.2)"
-    - nanopb (~> 0.3)
-  - FirebaseCore (5.3.1):
-    - GoogleUtilities/Logger (~> 5.2)
-  - FirebaseInstanceID (3.7.0):
-    - FirebaseCore (~> 5.2)
-    - GoogleUtilities/Environment (~> 5.2)
-    - GoogleUtilities/UserDefaults (~> 5.2)
   - FontBlaster (4.1.0)
-  - Google-Mobile-Ads-SDK (7.41.0)
-  - GoogleAppMeasurement (5.7.0):
-    - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
-    - GoogleUtilities/MethodSwizzler (~> 5.2)
-    - GoogleUtilities/Network (~> 5.2)
-    - "GoogleUtilities/NSData+zlib (~> 5.2)"
-    - nanopb (~> 0.3)
-  - GoogleUtilities/AppDelegateSwizzler (5.3.7):
-    - GoogleUtilities/Environment
-    - GoogleUtilities/Logger
-    - GoogleUtilities/Network
-  - GoogleUtilities/Environment (5.3.7)
-  - GoogleUtilities/Logger (5.3.7):
-    - GoogleUtilities/Environment
-  - GoogleUtilities/MethodSwizzler (5.3.7):
-    - GoogleUtilities/Logger
-  - GoogleUtilities/Network (5.3.7):
-    - GoogleUtilities/Logger
-    - "GoogleUtilities/NSData+zlib"
-    - GoogleUtilities/Reachability
-  - "GoogleUtilities/NSData+zlib (5.3.7)"
-  - GoogleUtilities/Reachability (5.3.7):
-    - GoogleUtilities/Logger
-  - GoogleUtilities/UserDefaults (5.3.7):
-    - GoogleUtilities/Logger
   - MGBrowserKit (0.1.0):
     - SnapKit (~> 4.0.0)
   - MGTemplateKit (0.1.7):
     - FontBlaster
     - UIColor_Hex_Swift (~> 4.2.0)
-  - nanopb (0.3.901):
-    - nanopb/decode (= 0.3.901)
-    - nanopb/encode (= 0.3.901)
-  - nanopb/decode (0.3.901)
-  - nanopb/encode (0.3.901)
   - SnapKit (4.0.1)
   - UIColor_Hex_Swift (4.2.0)
 
 DEPENDENCIES:
-  - Firebase/AdMob
-  - Firebase/Core
   - MGBrowserKit (from `../`)
   - "MGTemplateKit (from `https://haraldbregu@bitbucket.org/haraldbregu/mgtemplatekit.git`)"
-  - SnapKit (~> 4.0.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - Firebase
-    - FirebaseAnalytics
-    - FirebaseCore
-    - FirebaseInstanceID
     - FontBlaster
-    - Google-Mobile-Ads-SDK
-    - GoogleAppMeasurement
-    - GoogleUtilities
-    - nanopb
     - SnapKit
     - UIColor_Hex_Swift
 
@@ -94,20 +30,12 @@ CHECKOUT OPTIONS:
     :git: "https://haraldbregu@bitbucket.org/haraldbregu/mgtemplatekit.git"
 
 SPEC CHECKSUMS:
-  Firebase: 02f3281965c075426141a0ce1277e9de6649cab9
-  FirebaseAnalytics: 23851fe602c872130a2c5c55040b302120346cc2
-  FirebaseCore: 52f851b30e11360f1e67cf04b1edfebf0a47a2d3
-  FirebaseInstanceID: bd6fc5a258884e206fd5c474ebe4f5b00e21770e
   FontBlaster: 127aa66419478d1c62926c7fdb39841633344a45
-  Google-Mobile-Ads-SDK: 101ce89b94fdf60ec64ba7b6e9b9d812dc765936
-  GoogleAppMeasurement: 6cf307834da065863f9faf4c0de0a936d81dd832
-  GoogleUtilities: 111a012f4c3a29c9e7c954c082fafd6ee3c999c0
   MGBrowserKit: b1785b3d850163c973c32f230e204ca205f581c8
   MGTemplateKit: 8ccf7019c7411698e55b35ee9f6fd0050dbb431d
-  nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   UIColor_Hex_Swift: bc07fc197421ee896b9ed6dcfa2054b7fbf75145
 
-PODFILE CHECKSUM: 1cfb299fa17522c8e88e8aba438a85a0e53c25fd
+PODFILE CHECKSUM: 004f502f0e9346cfbd019366e285ec3ca216f19b
 
 COCOAPODS: 1.6.1

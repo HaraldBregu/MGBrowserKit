@@ -49,7 +49,7 @@ public class MGBrowserController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: design.leftBarButtonImage, style: .plain, target: self, action: #selector(revealMenuViewcontroller))
         
-        activityIndicatorView.activityIndicatorViewStyle = .white
+        activityIndicatorView.style = .white
         activityIndicatorView.center = webView.center
         
         webView.navigationDelegate = self
@@ -78,7 +78,7 @@ public class MGBrowserController: UIViewController {
     }
     
     private lazy var activityIndicatorView:UIActivityIndicatorView = {
-        let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        let activityIndicatorView = UIActivityIndicatorView(style: .gray)
         activityIndicatorView.center = view.center
         return activityIndicatorView
     }()

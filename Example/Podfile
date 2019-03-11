@@ -3,7 +3,4 @@ use_frameworks!
 target 'MGBrowserKit_Example' do
   pod 'MGBrowserKit', :path => '../'
   pod 'MGTemplateKit', :git => 'https://haraldbregu@bitbucket.org/haraldbregu/mgtemplatekit.git'
-  pod 'Firebase/Core'
-  pod 'Firebase/AdMob'
-  pod 'SnapKit', '~> 4.0.0'
 end

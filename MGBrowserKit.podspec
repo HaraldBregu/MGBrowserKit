@@ -23,6 +23,7 @@ Pod::Spec.new do |s|
       'MGBrowserKit' => ['MGBrowserKit/Classes/**/*.{storyboard,xib}']
   }
   s.dependency 'SnapKit', '~> 4.0.0'
+  s.swift_version = "4.2"
   #s.static_framework = true
   #s.framework 'Firebase'
   #s.dependency 'Firebase'

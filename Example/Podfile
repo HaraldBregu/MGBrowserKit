@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MGBrowserKit_Example' do
+  pod 'MGBrowserKit', :path => '../'
+
+  target 'MGBrowserKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

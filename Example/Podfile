@@ -2,5 +2,4 @@ use_frameworks!
 
 target 'MGBrowserKit_Example' do
   pod 'MGBrowserKit', :path => '../'
-  pod 'MGTemplateKit', :git => 'https://haraldbregu@bitbucket.org/haraldbregu/mgtemplatekit.git'
 end

@@ -7,21 +7,70 @@
 //
 
 import UIKit
-import MGTemplateKit
+import MGBrowserKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+class AppDelegate: UIResponder, UIApplicationDelegate, MGBrowserControllerDataSource, MGBrowserControllerDelegate {
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+//        MGTemplate.setup()
 
-        MGTemplate.setup()
+        window = UIWindow(frame: UIScreen.main.bounds)
+                
+        let controller = MGBrowserController.controller
+        controller.dataSource = self
+        controller.delegate = self
+        let string = MGBrowserString()
+        string.title = "Google"
+        string.navigationTitle = "Google"
+        controller.string = string
+        let color = MGBrowserColor()
+        color.backgroundView = .black
+        color.navigationBar = .black
+        color.navigationBarTint = .white
+        color.toolBar = .black
+        color.toolBarTint = .white
+        controller.color = color
+        let image = MGBrowserImage()
+        image.navigationItemMenu = #imageLiteral(resourceName: "menu")
+        controller.image = image
+        let data = MGBrowser()
+        data.url = "https://thenextweb.com/"
+        controller.data = data
+
+        window?.rootViewController = UINavigationController(rootViewController: controller)
+        window?.makeKeyAndVisible()
 
         return true
     }
+    
+    func leftBarButtonItems(_ controller: MGBrowserController) -> [UIBarButtonItem] {
+        let button1 = UIBarButtonItem()
+        button1.image = #imageLiteral(resourceName: "menu")
+        button1.style = .plain
+        button1.accessibilityIdentifier = "First"
+        
+        let button2 = UIBarButtonItem()
+        button2.image = #imageLiteral(resourceName: "menu")
+        button2.style = .plain
+        button2.accessibilityIdentifier = "Second"
 
+        return [button1, button2]
+    }
+    
+    func toolBarButtonItems(_ controller: MGBrowserController) -> [UIBarButtonItem] {
+        let button1 = UIBarButtonItem()
+        button1.image = #imageLiteral(resourceName: "menu")
+        button1.style = .plain
+        button1.accessibilityIdentifier = "BACK"
+        return [button1]
+    }
+    
+    func browserController(_ controller: MGBrowserController, didTapBarButtonItem barButtonItem: UIBarButtonItem) {
+        print("Navigation item is: \(String(describing: barButtonItem.accessibilityIdentifier))")
+    }
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
@@ -43,7 +92,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
 
 }
 

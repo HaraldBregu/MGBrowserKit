@@ -8,12 +8,14 @@ Pod::Spec.new do |s|
   s.author           = { 'Harald Bregu' => 'harald.bregu@gmail.com' }
   s.source           = { :git => 'https://github.com/HaraldBregu/MGBrowserKit.git', :tag => s.version.to_s }
   s.ios.deployment_target = '12.0'
+  s.ios.framework = 'WebKit'
   s.source_files = 'MGBrowserKit/Classes/**/*'
   s.resource_bundles = {
-      'MGBrowserKit' => ['MGBrowserKit/Classes/**/*.{storyboard,xib}']
+      'MGBrowserKit' => ['MGBrowserKit/Assets/**/*.{storyboard,xib}']
   }
   s.dependency 'SnapKit', '~> 4.0.0'
   s.swift_version = "4.2"
+  
   #s.static_framework = true
   #s.framework 'Firebase'
   #s.dependency 'Firebase'

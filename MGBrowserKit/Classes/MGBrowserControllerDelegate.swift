@@ -1,7 +1,7 @@
 // 
-//  Data+New.swift
+//  MGBrowserControllerDelegate.swift
 //
-//  Created by harald bregu on 08/03/2019.
+//  Created by harald bregu on 13/04/2019.
 //  Copyright © 2019 Dream Building Company. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,20 +23,10 @@
 //  THE SOFTWARE.
 //
 
-import Foundation
+import UIKit
 
-public extension Data {
-    
-    public var html2AttributedString: NSAttributedString? {
-        do {
-            return try NSAttributedString(data: self, options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil)
-        } catch {
-            return  nil
-        }
-    }
-    
-    public var html2String: String {
-        return html2AttributedString?.string ?? ""
-    }
-    
+public protocol MGBrowserControllerDelegate {
+    func browserController(_ controller:MGBrowserController, didTapBarButtonItem barButtonItem:UIBarButtonItem)
 }
+
+

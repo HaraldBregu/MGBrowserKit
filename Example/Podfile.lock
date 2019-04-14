@@ -1,41 +1,23 @@
 PODS:
-  - FontBlaster (4.1.0)
-  - MGBrowserKit (0.1.0):
+  - MGBrowserKit (0.1.2):
     - SnapKit (~> 4.0.0)
-  - MGTemplateKit (0.1.7):
-    - FontBlaster
-    - UIColor_Hex_Swift (~> 4.2.0)
   - SnapKit (4.0.1)
-  - UIColor_Hex_Swift (4.2.0)
 
 DEPENDENCIES:
   - MGBrowserKit (from `../`)
-  - "MGTemplateKit (from `https://haraldbregu@bitbucket.org/haraldbregu/mgtemplatekit.git`)"
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - FontBlaster
     - SnapKit
-    - UIColor_Hex_Swift
 
 EXTERNAL SOURCES:
   MGBrowserKit:
     :path: "../"
-  MGTemplateKit:
-    :git: "https://haraldbregu@bitbucket.org/haraldbregu/mgtemplatekit.git"
-
-CHECKOUT OPTIONS:
-  MGTemplateKit:
-    :commit: e59c8c520191913bf6c0fa04fd8234fb499ba5f6
-    :git: "https://haraldbregu@bitbucket.org/haraldbregu/mgtemplatekit.git"
 
 SPEC CHECKSUMS:
-  FontBlaster: 127aa66419478d1c62926c7fdb39841633344a45
-  MGBrowserKit: b1785b3d850163c973c32f230e204ca205f581c8
-  MGTemplateKit: 8ccf7019c7411698e55b35ee9f6fd0050dbb431d
+  MGBrowserKit: 101b4c3448c6c2314a53ffa82dd6a4e74a154b87
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
-  UIColor_Hex_Swift: bc07fc197421ee896b9ed6dcfa2054b7fbf75145
 
-PODFILE CHECKSUM: 004f502f0e9346cfbd019366e285ec3ca216f19b
+PODFILE CHECKSUM: be7ac5a384b35a74001fda43958073ff221fa1e7
 
 COCOAPODS: 1.6.1

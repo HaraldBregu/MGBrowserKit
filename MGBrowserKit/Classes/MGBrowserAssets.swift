@@ -1,5 +1,5 @@
 // 
-//  MGBrowserUI.swift
+//  MGBrowserAssets.swift
 //
 //  Created by harald bregu on 11/03/2019.
 //  Copyright © 2019 Dream Building Company. All rights reserved.
@@ -25,12 +25,27 @@
 
 import UIKit
 
-/// MGBrowserData class
-public class MGBrowserDesign {
-    public var navigationBarBackgroundColor:UIColor!
-    public var navigationBarTintColor:UIColor!
-    public var viewBackgroundColor:UIColor!
-    public var leftBarButtonImage:UIImage!
+public class MGBrowserImage {
+    public var navigationItemMenu:UIImage = UIImage()
+    public init() {
+        
+    }
+}
+
+public class MGBrowserColor {
+    public var backgroundView:UIColor!
+    public var navigationBar:UIColor!
+    public var navigationBarTint:UIColor!
+    public var toolBar:UIColor!
+    public var toolBarTint:UIColor!
+    public init() {
+        
+    }
+}
+
+public class MGBrowserString {
+    public var title:String!
+    public var navigationTitle:String!
     public init() {
         
     }

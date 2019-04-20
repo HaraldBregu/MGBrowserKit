@@ -11,6 +11,7 @@
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		A91C7C562269085A00682CE0 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91C7C552269085A00682CE0 /* Asset.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7F6FA284EC25C862EEC54678 /* Pods-MGBrowserKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MGBrowserKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-MGBrowserKit_Tests/Pods-MGBrowserKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		88743649C86E9152E939CA64 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		A0B4235CD12478790DAB3C83 /* Pods-MGBrowserKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MGBrowserKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-MGBrowserKit_Tests/Pods-MGBrowserKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		A91C7C552269085A00682CE0 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		B778B0FCB78DD1D14879BCFC /* Pods-MGBrowserKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MGBrowserKit_Example.release.xcconfig"; path = "Target Support Files/Pods-MGBrowserKit_Example/Pods-MGBrowserKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		DE5DE8A3D435F6C3A3BD601F /* MGBrowserKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MGBrowserKit.podspec; path = ../MGBrowserKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		EDAB88D3D764D83873629C9A /* Pods_MGBrowserKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MGBrowserKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				A91C7C552269085A00682CE0 /* Asset.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -235,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A91C7C562269085A00682CE0 /* Asset.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

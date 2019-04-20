@@ -9,32 +9,19 @@
 import UIKit
 import MGBrowserKit
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, MGBrowserControllerDataSource, MGBrowserControllerDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-//        MGTemplate.setup()
 
         window = UIWindow(frame: UIScreen.main.bounds)
                 
         let controller = MGBrowserController.controller
+        controller.asset = Asset.assets
         controller.dataSource = self
         controller.delegate = self
-        let string = MGBrowserString()
-        string.title = "Google"
-        string.navigationTitle = "Google"
-        controller.string = string
-        let color = MGBrowserColor()
-        color.backgroundView = .black
-        color.navigationBar = .black
-        color.navigationBarTint = .white
-        color.toolBar = .black
-        color.toolBarTint = .white
-        controller.color = color
-        let image = MGBrowserImage()
-        image.navigationItemMenu = #imageLiteral(resourceName: "menu")
-        controller.image = image
         let data = MGBrowser()
         data.url = "https://thenextweb.com/"
         controller.data = data

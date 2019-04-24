@@ -18,13 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MGBrowserControllerDataSo
 
         window = UIWindow(frame: UIScreen.main.bounds)
                 
-        let controller = MGBrowserController.controller
-        controller.asset = Asset.assets
+        let controller = MGBrowserController.instance
+        controller.assets = Asset.assets
         controller.dataSource = self
         controller.delegate = self
-        let data = MGBrowser()
-        data.url = "https://thenextweb.com/"
-        controller.data = data
 
         window?.rootViewController = UINavigationController(rootViewController: controller)
         window?.makeKeyAndVisible()

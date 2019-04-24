@@ -31,7 +31,6 @@ class Asset {
     
 }
 
-extension Asset:MGLandingAssetImpl {}
 extension Asset:BrowserAssetImpl {}
 
 // MARK - MGBrowserAsset
@@ -55,47 +54,40 @@ extension BrowserAssetImpl {
                 toolBarTint: .white),
             string: BrowserString(
                 title: "The Next Web",
-                navigationTitle: "The Next Web"))
+                navigationTitle: "The Next Web"),
+            data: BrowserData(url: "https://thenextweb.com/"))
     }
 }
 
 struct BrowserAsset: MGBrowserAsset {
-    var font:   MGBrowserFont
-    var image:  MGBrowserImage
-    var color:  MGBrowserColor
+    var font: MGBrowserFont
+    var image: MGBrowserImage
+    var color: MGBrowserColor
     var string: MGBrowserString
+    var data: MGBrowserData
 }
 
 struct BrowserFont: MGBrowserFont {
-    var primaryFont: UIFont
+    var primaryFont:UIFont
 }
 
 struct BrowserImage: MGBrowserImage {
-    var navigationItemMenu: UIImage
+    var navigationItemMenu:UIImage
 }
 
 struct BrowserColor: MGBrowserColor {
-    var backgroundView      :UIColor
-    var navigationBar       :UIColor
-    var navigationBarTint   :UIColor
-    var toolBar             :UIColor
-    var toolBarTint         :UIColor
+    var backgroundView:UIColor
+    var navigationBar:UIColor
+    var navigationBarTint:UIColor
+    var toolBar:UIColor
+    var toolBarTint:UIColor
 }
 
 struct BrowserString: MGBrowserString {
-    var title: String
-    var navigationTitle: String
+    var title:String
+    var navigationTitle:String
 }
 
-
-// MARK - MGLandingAsset
-
-protocol MGLandingAssetImpl {
-    static var assets:String { get }
-}
-
-extension MGLandingAssetImpl {
-    static var assets:String {
-        return ""
-    }
+struct BrowserData: MGBrowserData {
+    var url: String
 }

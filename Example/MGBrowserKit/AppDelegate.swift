@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MGBrowserControllerDataSo
         return true
     }
     
-    func leftBarButtonItems(_ controller: MGBrowserController) -> [UIBarButtonItem] {
+    func leftBarButtonItems(_ controller: UIViewController) -> [UIBarButtonItem] {
         let button1 = UIBarButtonItem()
         button1.image = #imageLiteral(resourceName: "menu")
         button1.style = .plain
@@ -43,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MGBrowserControllerDataSo
         return [button1, button2]
     }
     
-    func toolBarButtonItems(_ controller: MGBrowserController) -> [UIBarButtonItem] {
+    func toolBarButtonItems(_ controller: UIViewController) -> [UIBarButtonItem] {
         let button1 = UIBarButtonItem()
         button1.image = #imageLiteral(resourceName: "menu")
         button1.style = .plain
@@ -51,7 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MGBrowserControllerDataSo
         return [button1]
     }
     
-    func browserController(_ controller: MGBrowserController, didTapBarButtonItem barButtonItem: UIBarButtonItem) {
+    func browserController(_ controller: UIViewController, didTapBarButtonItem barButtonItem: UIBarButtonItem) {
         print("Navigation item is: \(String(describing: barButtonItem.accessibilityIdentifier))")
     }
     

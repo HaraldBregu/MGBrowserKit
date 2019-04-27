@@ -42,10 +42,8 @@ protocol BrowserAssetImpl {
 extension BrowserAssetImpl {
     static var assets:MGBrowserAsset {
         return BrowserAsset(
-            font: BrowserFont(
-                primaryFont: UIFont()),
-            image: BrowserImage(
-                navigationItemMenu: #imageLiteral(resourceName: "menu")),
+            font: BrowserFont(),
+            image: BrowserImage(),
             color: BrowserColor(
                 backgroundView: .black,
                 navigationBar: .black,
@@ -55,7 +53,9 @@ extension BrowserAssetImpl {
             string: BrowserString(
                 title: "The Next Web",
                 navigationTitle: "The Next Web"),
-            data: BrowserData(url: "https://thenextweb.com/"))
+            data: BrowserData(url: "https://thenextweb.com/",
+                              enableAds: false,
+                              adsUnitId: ""))
     }
 }
 
@@ -68,11 +68,11 @@ struct BrowserAsset: MGBrowserAsset {
 }
 
 struct BrowserFont: MGBrowserFont {
-    var primaryFont:UIFont
+
 }
 
 struct BrowserImage: MGBrowserImage {
-    var navigationItemMenu:UIImage
+
 }
 
 struct BrowserColor: MGBrowserColor {
@@ -90,4 +90,6 @@ struct BrowserString: MGBrowserString {
 
 struct BrowserData: MGBrowserData {
     var url: String
+    var enableAds: Bool
+    var adsUnitId: String
 }

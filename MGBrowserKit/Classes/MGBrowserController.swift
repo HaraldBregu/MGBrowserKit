@@ -121,7 +121,8 @@ public class MGBrowserController: UIViewController {
         if let assets = assets, assets.data.enableAds == true, assets.data.adsUnitId.count > 0 {
             bannerView.snp.makeConstraints { make in
                 make.bottom.equalTo(self.view)
-                make.centerX.equalTo(self.view.center)
+                make.leading.equalTo(self.view)
+                make.trailing.equalTo(self.view)
             }
             bannerView.adUnitID = assets.data.adsUnitId
             bannerView.rootViewController = self

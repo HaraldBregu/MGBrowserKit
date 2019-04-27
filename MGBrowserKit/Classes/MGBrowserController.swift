@@ -131,7 +131,7 @@ public class MGBrowserController: UIViewController {
     }
     
     @objc private func navigationItemMenuAction(barButtonItem: UIBarButtonItem) {
-        self.delegate.browserController(self, didTapBarButtonItem: barButtonItem)
+        self.delegate.controller(self, didTapBarButtonItem: barButtonItem)
     }
     
     @objc private func goBack(barButtonItem: UIBarButtonItem) {

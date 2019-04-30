@@ -12,6 +12,7 @@ import MGBrowserKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, MGBrowserControllerDataSource, MGBrowserControllerDelegate {
+    
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -51,10 +52,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MGBrowserControllerDataSo
         return [button1]
     }
     
-    func browserController(_ controller: UIViewController, didTapBarButtonItem barButtonItem: UIBarButtonItem) {
-        print("Navigation item is: \(String(describing: barButtonItem.accessibilityIdentifier))")
+    func rightBarButtonItems(_ controller: UIViewController) -> [UIBarButtonItem] {
+        let button1 = UIBarButtonItem()
+        button1.image = #imageLiteral(resourceName: "menu")
+        button1.style = .plain
+        button1.accessibilityIdentifier = "BACK"
+        return [button1]
     }
     
+    func controller(_ controller: UIViewController, didTapBarButtonItem barButtonItem: UIBarButtonItem) {
+        print("Navigation item is: \(String(describing: barButtonItem.accessibilityIdentifier))")
+    }
+
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

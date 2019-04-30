@@ -27,5 +27,6 @@ import UIKit
 
 public protocol MGBrowserControllerDataSource {
     func leftBarButtonItems(_ controller: UIViewController) -> [UIBarButtonItem]
+    func rightBarButtonItems(_ controller: UIViewController) -> [UIBarButtonItem]
     func toolBarButtonItems(_ controller: UIViewController) -> [UIBarButtonItem]
 }

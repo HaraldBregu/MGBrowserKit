@@ -44,18 +44,14 @@ extension BrowserAssetImpl {
         return BrowserAsset(
             font: BrowserFont(),
             image: BrowserImage(),
-            color: BrowserColor(
-                backgroundView: .black,
-                navigationBar: .black,
-                navigationBarTint: .white,
-                toolBar: .black,
-                toolBarTint: .white),
+            color: BrowserColor(navigationBar: .black, navigationBarContent: .white, toolBar: .black, toolBarContent: .white, view: .black, viewContent: .white),
             string: BrowserString(
                 title: "The Next Web",
                 navigationTitle: "The Next Web"),
-            data: BrowserData(url: "https://thenextweb.com/",
-                              enableAds: false,
-                              adsUnitId: ""))
+            data: BrowserData(
+                url: "https://thenextweb.com/",
+                enableAds: false,
+                adsUnitId: ""))
     }
 }
 
@@ -76,11 +72,12 @@ struct BrowserImage: MGBrowserImage {
 }
 
 struct BrowserColor: MGBrowserColor {
-    var backgroundView:UIColor
-    var navigationBar:UIColor
-    var navigationBarTint:UIColor
-    var toolBar:UIColor
-    var toolBarTint:UIColor
+    var navigationBar: UIColor
+    var navigationBarContent: UIColor
+    var toolBar: UIColor
+    var toolBarContent: UIColor
+    var view: UIColor
+    var viewContent: UIColor
 }
 
 struct BrowserString: MGBrowserString {
